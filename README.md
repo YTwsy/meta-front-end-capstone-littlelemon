@@ -1,8 +1,22 @@
-# React + Vite
+# Meta Front-End Developer Capstone Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is part of the Meta Front-End Developer Professional Certificate offered by Coursera. It showcases the skills and knowledge acquired throughout the course, focusing on React, Vite, and Ant Design to build a modern, responsive front-end application.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To get a local copy up and running follow these simple steps.
+
+### Prerequisites
+
+- Node.js installed on your local machine
+- npm or yarn
+
+```bash
+# Check Node.js installation
+node --version
+
+# Check npm installation
+npm --version
+
+# or check yarn installation
+yarn --version
