@@ -1,21 +1,33 @@
-import { useState } from 'react'
-import './App.css'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Nav from './components/Nav'
-import Main from './components/Main'
+import React from 'react';
+import { Layout, theme, ConfigProvider} from 'antd';
+import MyFooter from "./components/MyFooter.jsx";
+import MyHeader from "./components/MyHeader.jsx";
+import MyContent from "./components/MyContent.jsx";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+    const {
+        token: { colorBgContainer, borderRadiusLG },
+    } = theme.useToken();
+    return (
+        <ConfigProvider
+            theme={{
+                token: {
+                    // Seed Token，影响范围大
+                    colorPrimary: '#FECE14',
+                    borderRadius: 2,
 
-  return (
-      <>
-        <Header></Header>
-        <Nav></Nav>
-        <Main></Main>
-        <Footer></Footer>
-      </>
-  )
-}
+                    // 派生变量，影响范围小
+                    colorBgContainer: '#ffffff',
+                },
+            }}
+        >
+            <Layout>
+                <MyHeader/>
+                <MyContent colorBgContainer={colorBgContainer} borderRadiusLG={borderRadiusLG}/>
+                <MyFooter/>
 
-export default App
+            </Layout>
+        </ConfigProvider>
+    );
+};
+export default App;
